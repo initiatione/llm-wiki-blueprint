@@ -25,6 +25,23 @@
 - 双语文档
 - 模板和示例配置
 
+## 生态位置
+
+这个项目默认存在一个三层生态：
+
+1. **基座工作流仓库**
+   单独存在，负责 skills、workflow、agent 接入。
+
+2. **私有 live Vault**
+   存放你真实知识、草稿、review 状态、正式知识。
+
+3. **增强层**
+   用于放 review-flow 包装、实验功能、可视化管理面板等不想污染基座仓库的内容。
+
+本仓库主要负责的是：
+
+**Vault 蓝图层。**
+
 ## 这个项目不是什么
 
 它不是：
@@ -95,7 +112,16 @@ _raw -> _drafts -> _meta/review -> 正式知识区
 - Templater
 - Linter
 - Git
+- BRAT
 - 你喜欢的执行型智能体
+
+这些插件的典型作用：
+
+- **Dataview**：做看板和队列可视化
+- **Templater**：统一模板
+- **Linter**：保证 frontmatter 和 markdown 规范
+- **Git**：做版本保护
+- **BRAT**：便于测试/分发与工作流配套的社区插件
 
 ## 如何使用
 
@@ -117,3 +143,10 @@ _raw -> _drafts -> _meta/review -> 正式知识区
 
 MIT
 
+## 其他项目文档
+
+- `DEPLOYMENT.md`
+- `DEPLOYMENT.zh-CN.md`
+- `CONTRIBUTING.md`
+- `CHANGELOG.md`
+- `SECURITY.md`

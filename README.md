@@ -31,6 +31,22 @@ It contains:
 - bilingual documentation
 - sample plugin-compatible Obsidian configuration
 
+## Ecosystem Model
+
+This blueprint assumes a three-part ecosystem:
+
+1. **Base workflow repo**
+   A separate workflow/skills repository that acts as the operational base.
+
+2. **Private live vault**
+   Your actual Obsidian vault where knowledge, drafts, review state, and canonical notes live.
+
+3. **Enhancement layer**
+   An optional sidecar layer for extra wrappers, review-flow logic, or UI experiments that should not pollute the base workflow repo.
+
+This repository focuses on the **vault blueprint layer**.
+It documents how the vault should be structured and governed, while remaining compatible with a clean base repo and optional enhancement layer.
+
 ## What this project is not
 
 It is not:
@@ -125,6 +141,17 @@ This blueprint is designed to remain compatible with a typical Obsidian plugin s
 - Linter
 - Git
 - BRAT
+- optional execution-side plugins such as chat-capable agent panels
+
+### Why these plugins matter
+
+- **Dataview**: dashboard and queue visibility
+- **Templater**: consistent note creation
+- **Linter**: formatting and metadata hygiene
+- **Git**: version safety
+- **BRAT**: testing or distributing community plugins around the workflow
+
+This repository does not require these plugins to be present, but it is designed to work well with them.
 
 Optional UI/control plugins can be layered on top later.
 
@@ -144,3 +171,11 @@ MIT
 
 See `LICENSE`.
 
+## Additional Project Docs
+
+- `README.zh-CN.md`
+- `DEPLOYMENT.md`
+- `DEPLOYMENT.zh-CN.md`
+- `CONTRIBUTING.md`
+- `CHANGELOG.md`
+- `SECURITY.md`
