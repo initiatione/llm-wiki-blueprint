@@ -4,6 +4,8 @@
 
 Review-gated LLM wiki starter kit for Obsidian.
 
+![llm-wiki-blueprint hero](./docs/assets/hero.svg)
+
 Build a private or team knowledge base where:
 
 - new material enters a raw intake lane
@@ -96,6 +98,17 @@ Read more:
 - [Ecosystem](./docs/ecosystem.md)
 - [Reference Projects](./docs/reference-projects.md)
 
+## Compatibility Matrix
+
+| Layer | What it is | Required | Notes |
+|---|---|---|---|
+| Base workflow repo | external workflow / skills / bootstrap layer | Recommended | Keep it separate so it can track upstream changes |
+| Live vault | your private Obsidian knowledge vault | Required | This starter kit is meant to be copied here |
+| Execution agent | Claude Code, Codex, or similar file-capable agent | Required | Handles ingest, draft generation, revision, and promotion |
+| Enhancement layer | external wrappers / review-flow / UI experiments | Optional | Keep faster-changing logic outside the base repo |
+| Obsidian plugin stack | Dataview, Templater, Linter, Git, BRAT | Recommended | Improves visibility, consistency, and extensibility |
+| Future management plugin | optional visual control layer | Optional | Can sit on top of the live vault without replacing it |
+
 ## Recommended plugin stack
 
 This starter kit is designed to work well with:
@@ -152,4 +165,3 @@ Treat this repository as:
 - a template layer
 
 Do **not** treat it as your private live knowledge store.
-

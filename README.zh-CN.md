@@ -4,6 +4,8 @@
 
 面向 Obsidian 的 **带审稿闸门的 LLM Wiki 开源 starter kit**。
 
+![llm-wiki-blueprint hero](./docs/assets/hero.svg)
+
 它适合构建这样的私有或团队知识库：
 
 - 新资料先进入原始入口
@@ -98,6 +100,17 @@ _raw -> _drafts -> _meta/review -> 正式知识区
 - [生态说明](./docs/ecosystem.md)
 - [参考项目](./docs/reference-projects.md)
 
+## 兼容矩阵
+
+| 层 | 含义 | 是否必需 | 说明 |
+|---|---|---|---|
+| 基座工作流仓库 | 外部 workflow / skills / bootstrap 层 | 推荐 | 建议保持独立，方便继续跟上游 |
+| Live Vault | 你的私有 Obsidian 知识库 | 必需 | 本 starter kit 是给这一层复制和改造用的 |
+| 执行型智能体 | Claude Code、Codex 或类似具备文件能力的智能体 | 必需 | 负责 ingest、draft、重做和归档 |
+| 增强层 | 外部 wrappers / review-flow / UI 实验层 | 可选 | 适合放变化快、不想污染基座的逻辑 |
+| Obsidian 插件栈 | Dataview、Templater、Linter、Git、BRAT | 推荐 | 提高可视化、模板一致性和扩展能力 |
+| 未来管理插件 | 可选的可视化控制层 | 可选 | 可以叠加在 live Vault 上，但不替代现有工作流 |
+
 ## 推荐插件栈
 
 这套 starter kit 推荐搭配：
@@ -154,4 +167,3 @@ _raw -> _drafts -> _meta/review -> 正式知识区
 - 模板层
 
 而不是把它直接当成你的私有 live 知识库。
-
