@@ -1,0 +1,115 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "LLM Wiki Note",
+  "type": "object",
+  "required": [
+    "id",
+    "title",
+    "status",
+    "type",
+    "updated_at"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "inbox",
+        "candidate",
+        "active",
+        "cooling",
+        "quarantine",
+        "superseded",
+        "deleted"
+      ]
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "concept",
+        "method",
+        "pattern",
+        "policy",
+        "reference",
+        "experiment",
+        "decision",
+        "project",
+        "cross-domain-synthesis",
+        "news",
+        "source",
+        "architecture"
+      ]
+    },
+    "primary_domain": {
+      "type": "string"
+    },
+    "context": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "topics": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "methods": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "stack": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "scope": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "cross_domains": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "valid_when": {
+      "type": "string"
+    },
+    "invalid_when": {
+      "type": "string"
+    },
+    "supersedes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "updated_at": {
+      "type": "string"
+    }
+  }
+}

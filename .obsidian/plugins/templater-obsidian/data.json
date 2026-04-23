@@ -1,0 +1,40 @@
+{
+  "folderTemplates": [
+    {
+      "folder": "_raw",
+      "template": "templates/web-clip-note.md"
+    },
+    {
+      "folder": "concepts",
+      "template": "templates/concept-note.md"
+    },
+    {
+      "folder": "_drafts",
+      "template": "templates/draft-note.md"
+    },
+    {
+      "folder": "synthesis",
+      "template": "templates/cross-domain-synthesis.md"
+    },
+    {
+      "folder": "projects",
+      "template": "templates/project-note.md"
+    },
+    {
+      "folder": "journal/news",
+      "template": "templates/news-note.md"
+    },
+    {
+      "folder": "references",
+      "template": "templates/source-note.md"
+    }
+  ],
+  "templates_folder": "templates",
+  "templates_pairs": [],
+  "trigger_on_file_creation": true,
+  "auto_jump_to_cursor": false,
+  "enable_system_commands": false,
+  "shell_path": "",
+  "user_scripts_folder": "",
+  "timeout": 5
+}

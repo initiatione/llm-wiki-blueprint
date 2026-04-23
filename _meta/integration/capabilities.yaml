@@ -1,0 +1,20 @@
+transports:
+  mcp: supported
+  cli: supported
+  obsidian: supported
+  vendor_adapters: supported
+capabilities:
+  read_source_layer: true
+  write_draft_workspace: true
+  read_canonical_knowledge: true
+  write_canonical_knowledge: review-gated
+  write_time_sensitive_layer: review-gated
+  write_quarantine: true
+  update_taxonomy: review-gated
+  update_architecture: sync-update-required
+constraints:
+  - Vendor-specific folders are adapters, not source of truth.
+  - Drafts are not default factual sources.
+  - Canonical Knowledge must remain bounded, sourced, and reusable.
+  - Time-sensitive notes must include explicit dates.
+

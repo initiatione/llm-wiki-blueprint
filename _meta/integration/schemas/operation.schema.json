@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "LLM Wiki Operation",
+  "type": "object",
+  "required": [
+    "operation",
+    "actor",
+    "timestamp"
+  ],
+  "properties": {
+    "operation": {
+      "type": "string"
+    },
+    "actor": {
+      "type": "string"
+    },
+    "target_paths": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "proposed",
+        "applied",
+        "rejected"
+      ]
+    },
+    "notes": {
+      "type": "string"
+    },
+    "timestamp": {
+      "type": "string"
+    }
+  }
+}
+

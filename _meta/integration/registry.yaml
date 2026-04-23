@@ -1,0 +1,24 @@
+schema_version: 1
+compat_version: 1
+vault:
+  name: your-vault-name
+  path: "<YOUR_VAULT_PATH>"
+entrypoints:
+  operating_schema: WIKI.md
+  agent_bootstrap: AGENTS.md
+  knowledge_index: index.md
+  working_context: _meta/working-context.md
+  architecture_overview: _meta/architecture/overview.md
+layers:
+  source_layer: _raw
+  draft_workspace: _drafts
+  canonical_knowledge:
+    - concepts
+    - entities
+    - skills
+    - references
+    - synthesis
+    - projects
+  review_layer: _meta/review
+  quarantine_layer: _quarantine
+

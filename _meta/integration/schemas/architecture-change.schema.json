@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "LLM Wiki Architecture Change",
+  "type": "object",
+  "required": [
+    "decision_id",
+    "schema_version",
+    "compat_version",
+    "summary",
+    "updated_at"
+  ],
+  "properties": {
+    "decision_id": {
+      "type": "string"
+    },
+    "schema_version": {
+      "type": "integer"
+    },
+    "compat_version": {
+      "type": "integer"
+    },
+    "summary": {
+      "type": "string"
+    },
+    "supersedes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "updated_at": {
+      "type": "string"
+    }
+  }
+}
+

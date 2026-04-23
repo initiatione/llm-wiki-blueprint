@@ -1,0 +1,16 @@
+draft_path: ""
+target_path: ""
+review_state: pending
+risk_level: medium
+risk_reasons: []
+review_mode: human-lite
+review_decision_source: policy
+suggested_action: review
+recompile_count: 0
+rejection_feedback: []
+blocked_reason: ""
+approved_at: ""
+auto_promoted_at: ""
+audited_at: ""
+audit_result: ""
+updated_at: ""
