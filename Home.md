@@ -12,6 +12,11 @@ status: canonical
 
 # LLM Wiki Home
 
+This note can serve two roles:
+
+1. inside Obsidian, as a dashboard-style home note
+2. on GitHub, as a browsable entry page into the blueprint
+
 ## Daily Loop
 
 1. Put new material into `_raw/`
@@ -83,8 +88,17 @@ LIMIT 20
 
 ## Guides
 
-- [[_meta/guides/minimal-user-loop]]
-- [[_meta/guides/review-quick-decisions]]
-- [[_meta/guides/claudian-short-prompts]]
-- [[_meta/governance/default-routing]]
-- [[_meta/governance/low-risk-default-pass]]
+- [Minimal User Loop](./_meta/guides/minimal-user-loop.md)
+- [Review Quick Decisions](./_meta/guides/review-quick-decisions.md)
+- [Claudian Short Prompts](./_meta/guides/claudian-short-prompts.md)
+- [Default Routing](./_meta/governance/default-routing.md)
+- [Low-risk Default Pass](./_meta/governance/low-risk-default-pass.md)
+
+## Related Docs
+
+- [Documentation Index](./docs/README.md)
+- [Architecture Diagrams](./docs/architecture-diagrams.md)
+- [Quickstart](./docs/quickstart.md)
+- [Usage](./docs/usage.md)
+- [Deployment](./docs/deployment.md)
+- [Chinese Guide](./docs/chinese-guide.md)

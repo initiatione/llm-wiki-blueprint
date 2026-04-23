@@ -31,6 +31,13 @@ It contains:
 - bilingual documentation
 - sample plugin-compatible Obsidian configuration
 
+## Start Here
+
+- [Home.md](./Home.md)
+- [Documentation Index](./docs/README.md)
+- [Quickstart](./docs/quickstart.md)
+- [Chinese Guide](./docs/chinese-guide.md)
+
 ## Ecosystem Model
 
 This blueprint assumes a three-part ecosystem:
