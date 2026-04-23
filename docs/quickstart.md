@@ -46,4 +46,11 @@ Use the deployment prompt from `DEPLOYMENT.md` or `DEPLOYMENT.zh-CN.md`.
 - `DEPLOYMENT.md`
 - `USAGE.md`
 - `ECOSYSTEM.md`
+- `examples/sample-content/README.md`
 
+## Optional bootstrap shortcut
+
+If you want a ready-to-copy starter vault:
+
+- PowerShell: `scripts/bootstrap-sample-vault.ps1`
+- Bash: `scripts/bootstrap-sample-vault.sh`

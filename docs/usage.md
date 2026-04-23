@@ -78,3 +78,12 @@ Example:
 This draft is approved. Promote it into the most appropriate canonical folder.
 ```
 
+## 7. Example content
+
+If you want to see the workflow in concrete form, inspect:
+
+- `examples/sample-content/_raw/`
+- `examples/sample-content/_drafts/`
+- `examples/sample-content/_meta/review/`
+- `examples/sample-content/references/`
+

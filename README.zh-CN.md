@@ -145,12 +145,14 @@ MIT
 
 ## 其他项目文档
 
-- `QUICKSTART.md`
-- `USAGE.md`
-- `ECOSYSTEM.md`
-- `REFERENCE_PROJECTS.md`
-- `DEPLOYMENT.md`
-- `DEPLOYMENT.zh-CN.md`
+- `docs/README.md`
+- `docs/quickstart.md`
+- `docs/usage.md`
+- `docs/ecosystem.md`
+- `docs/reference-projects.md`
+- `docs/deployment.md`
+- `docs/deployment.zh-CN.md`
+- `docs/chinese-guide.md`
 - `CONTRIBUTING.md`
 - `CHANGELOG.md`
 - `SECURITY.md`
@@ -160,4 +162,7 @@ MIT
 本仓库现在还包含：
 
 - `examples/wiki_ext/`：公开的增强层样板
+- `examples/sample-content/`：从 raw 到 draft 到 review 再到正式知识的最小样板
 - `docs/reference-projects/`：参考项目与设计来源的扩展说明目录
+- `scripts/bootstrap-sample-vault.ps1`
+- `scripts/bootstrap-sample-vault.sh`

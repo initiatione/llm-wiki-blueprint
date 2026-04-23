@@ -108,7 +108,6 @@ This means:
 ### Chinese
 
 - `README.zh-CN.md`
-- `中文导览.md`
 - `_meta/guides/当前 llm-wiki 框架说明（中文）.md`
 - `_meta/guides/智能体工作说明（中文）.md`
 - `_meta/guides/英文文件中文索引.md`
@@ -174,12 +173,14 @@ See `LICENSE`.
 ## Additional Project Docs
 
 - `README.zh-CN.md`
-- `QUICKSTART.md`
-- `USAGE.md`
-- `ECOSYSTEM.md`
-- `REFERENCE_PROJECTS.md`
-- `DEPLOYMENT.md`
-- `DEPLOYMENT.zh-CN.md`
+- `docs/README.md`
+- `docs/quickstart.md`
+- `docs/usage.md`
+- `docs/ecosystem.md`
+- `docs/reference-projects.md`
+- `docs/deployment.md`
+- `docs/deployment.zh-CN.md`
+- `docs/chinese-guide.md`
 - `CONTRIBUTING.md`
 - `CHANGELOG.md`
 - `SECURITY.md`
@@ -189,4 +190,7 @@ See `LICENSE`.
 This repository also includes:
 
 - `examples/wiki_ext/` — a public outer enhancement-layer example
+- `examples/sample-content/` — a minimal workflow example from raw to reviewed canonical note
 - `docs/reference-projects/` — room for longer-form notes on adjacent projects and patterns
+- `scripts/bootstrap-sample-vault.ps1`
+- `scripts/bootstrap-sample-vault.sh`

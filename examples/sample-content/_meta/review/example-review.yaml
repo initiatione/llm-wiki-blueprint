@@ -1,0 +1,19 @@
+draft_path: "_drafts/example-draft.md"
+target_path: "references/example-source-summary.md"
+review_state: pending
+risk_level: low
+risk_reasons:
+  - "single source"
+  - "bounded summary"
+review_mode: human-lite
+review_decision_source: policy
+suggested_action: through
+recompile_count: 0
+rejection_feedback: []
+blocked_reason: ""
+approved_at: ""
+auto_promoted_at: ""
+audited_at: ""
+audit_result: ""
+updated_at: "2026-01-02"
+
