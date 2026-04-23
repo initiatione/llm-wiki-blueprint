@@ -1,58 +1,137 @@
 # llm-wiki-blueprint
 
-An open-source, review-gated LLM wiki blueprint for Obsidian.
+[English](./README.md) | [简体中文](./README.zh-CN.md)
 
-This project provides a **vault template + governance layer + lightweight workflow design** for building a private or team knowledge base where:
+Review-gated LLM wiki starter kit for Obsidian.
 
-- raw material enters an intake lane
-- AI generates drafts instead of writing directly to canonical knowledge
+Build a private or team knowledge base where:
+
+- new material enters a raw intake lane
+- AI generates drafts instead of writing directly into canonical knowledge
 - review happens before promotion
-- low-signal notes can be isolated instead of polluting the main knowledge base
-- the workflow remains compatible with agent-driven execution
+- low-signal content can be isolated instead of polluting the main wiki
+- the system stays compatible with agent-driven execution
 
-It is designed to work well with:
+## Why this exists
 
-- Obsidian
-- agent-based execution workflows
-- sidecar execution tools such as chat-capable coding agents
-- a clean separation between knowledge content, review state, and execution logic
+Most LLM knowledge workflows fail in one of two ways:
 
-## What this project is
+- they are too manual to sustain
+- they are too automatic to trust
 
-This repository is a **blueprint**, not a monolithic application.
+This project chooses a middle path:
 
-It contains:
+**AI handles distillation and maintenance work; the user keeps final judgment over publication.**
 
-- a recommended vault structure
-- templates for notes and drafts
-- governance and lifecycle documents
-- review-state conventions
-- dashboard notes
-- bilingual documentation
-- sample plugin-compatible Obsidian configuration
+## What you get
 
-## Start Here
+- a recommended Obsidian vault structure
+- note templates for raw, draft, canonical, and review-oriented flows
+- governance docs for routing, review, lifecycle, and quarantine
+- sample Obsidian configuration
+- bilingual docs
+- starter examples for an outer enhancement layer
+- sample content showing the workflow from raw note to reviewed canonical note
 
-- [Home.md](./Home.md)
+## Core workflow
+
+```text
+_raw -> _drafts -> _meta/review -> canonical folders
+```
+
+Canonical folders:
+
+- `concepts/`
+- `entities/`
+- `skills/`
+- `references/`
+- `synthesis/`
+- `projects/`
+
+## Quick start
+
+### Option A: Manual
+
+1. Create a new private vault folder
+2. Copy this blueprint structure into it
+3. Open the vault in Obsidian
+4. Point your preferred execution agent at the vault
+5. Start by placing new material into `_raw/`
+
+### Option B: Agent-guided
+
+Use an execution agent such as Claude Code, Codex, or another file-capable coding agent to deploy the blueprint into a new vault.
+
+Start here:
+
+- [Quickstart](./docs/quickstart.md)
+- [Deployment](./docs/deployment.md)
+
+## Start here
+
+- [Home](./Home.md)
 - [Documentation Index](./docs/README.md)
 - [Quickstart](./docs/quickstart.md)
+- [Usage](./docs/usage.md)
+- [Architecture Diagrams](./docs/architecture-diagrams.md)
 - [Chinese Guide](./docs/chinese-guide.md)
 
-## Ecosystem Model
+## Ecosystem
 
-This blueprint assumes a three-part ecosystem:
+This project assumes a three-part ecosystem:
 
 1. **Base workflow repo**
-   A separate workflow/skills repository that acts as the operational base.
+   A separate workflow/skills repository that acts as the operational base
 
 2. **Private live vault**
-   Your actual Obsidian vault where knowledge, drafts, review state, and canonical notes live.
+   Your actual Obsidian vault where raw material, drafts, review state, and canonical knowledge live
 
 3. **Enhancement layer**
-   An optional sidecar layer for extra wrappers, review-flow logic, or UI experiments that should not pollute the base workflow repo.
+   An optional sidecar layer for wrappers, review-flow logic, UI experiments, or management plugins
 
 This repository focuses on the **vault blueprint layer**.
-It documents how the vault should be structured and governed, while remaining compatible with a clean base repo and optional enhancement layer.
+
+Read more:
+
+- [Ecosystem](./docs/ecosystem.md)
+- [Reference Projects](./docs/reference-projects.md)
+
+## Recommended plugin stack
+
+This starter kit is designed to work well with:
+
+- Dataview
+- Templater
+- Linter
+- Git
+- BRAT
+
+Optional execution-side plugins or agent panels may be layered on top later.
+
+## Included docs
+
+Core docs:
+
+- [Documentation Index](./docs/README.md)
+- [Quickstart](./docs/quickstart.md)
+- [Usage](./docs/usage.md)
+- [Deployment](./docs/deployment.md)
+- [Architecture Diagrams](./docs/architecture-diagrams.md)
+- [Chinese Guide](./docs/chinese-guide.md)
+
+Project standards:
+
+- [Contributing](./CONTRIBUTING.md)
+- [Changelog](./CHANGELOG.md)
+- [Security](./SECURITY.md)
+- [License](./LICENSE)
+
+## Examples and starter assets
+
+- [examples/wiki_ext](./examples/wiki_ext)
+- [examples/sample-content](./examples/sample-content)
+- [scripts/bootstrap-sample-vault.ps1](./scripts/bootstrap-sample-vault.ps1)
+- [scripts/bootstrap-sample-vault.sh](./scripts/bootstrap-sample-vault.sh)
 
 ## What this project is not
 
@@ -62,143 +141,15 @@ It is not:
 - a hard dependency on one vendor
 - a graph database
 - an auto-publish knowledge system
+- a public live knowledge vault
 
-## Core Idea
+## Adoption rule
 
-The main workflow is:
+Treat this repository as:
 
-```text
-_raw -> _drafts -> _meta/review -> canonical folders
-```
+- a framework
+- a starter kit
+- a template layer
 
-This means:
+Do **not** treat it as your private live knowledge store.
 
-1. New material enters `_raw/`
-2. AI produces a candidate note in `_drafts/`
-3. Review state is tracked in `_meta/review/`
-4. Approved notes move into canonical folders such as:
-   - `concepts/`
-   - `entities/`
-   - `skills/`
-   - `references/`
-   - `synthesis/`
-   - `projects/`
-
-## Recommended Canonical Folders
-
-- `concepts/` — stable concept definitions
-- `entities/` — tools, people, libraries, orgs, datasets
-- `skills/` — repeatable methods and workflows
-- `references/` — source-derived summaries and bounded source notes
-- `synthesis/` — cross-domain or multi-source synthesis
-- `projects/` — project-specific knowledge
-
-## Recommended System Folders
-
-- `_raw/` — intake lane for source material
-- `_drafts/` — candidate notes waiting for promotion
-- `_review/` — optional lightweight review-facing notes
-- `_quarantine/` — isolated low-signal or uncertain notes
-- `_archives/` — archived or retired material
-- `_meta/` — taxonomy, architecture, governance, dashboards, review state
-
-## Included Documentation
-
-### English
-
-- `WIKI.md` — operating schema
-- `AGENTS.md` — generic agent instructions
-- `Home.md` — dashboard-style home note
-- `_meta/governance/` — lifecycle, routing, review, quarantine, low-risk policy
-- `_meta/architecture/` — architecture overview and design decisions
-
-### Chinese
-
-- `README.zh-CN.md`
-- `_meta/guides/当前 llm-wiki 框架说明（中文）.md`
-- `_meta/guides/智能体工作说明（中文）.md`
-- `_meta/guides/英文文件中文索引.md`
-
-## Suggested Usage
-
-1. Copy this blueprint into a new Obsidian vault or adapt your existing vault to this structure
-2. Configure your preferred execution agent or workflow to target the vault
-3. Put source material into `_raw/`
-4. Generate drafts into `_drafts/`
-5. Review and promote selectively
-
-## Why this blueprint exists
-
-Many LLM knowledge systems are either:
-
-- too manual to sustain
-- too automatic to trust
-
-This blueprint chooses a middle path:
-
-**AI handles distillation and maintenance work; the user keeps final judgment over publication.**
-
-## Plugin Compatibility
-
-This blueprint is designed to remain compatible with a typical Obsidian plugin stack such as:
-
-- Dataview
-- Templater
-- Linter
-- Git
-- BRAT
-- optional execution-side plugins such as chat-capable agent panels
-
-### Why these plugins matter
-
-- **Dataview**: dashboard and queue visibility
-- **Templater**: consistent note creation
-- **Linter**: formatting and metadata hygiene
-- **Git**: version safety
-- **BRAT**: testing or distributing community plugins around the workflow
-
-This repository does not require these plugins to be present, but it is designed to work well with them.
-
-Optional UI/control plugins can be layered on top later.
-
-## Publishing and Forking
-
-This repository is meant to be forked, adapted, and extended.
-
-If you adopt it:
-
-- keep your private notes out of the public repo
-- keep runtime secrets out of the vault
-- treat this repository as a framework and template, not as your private live data store
-
-## License
-
-MIT
-
-See `LICENSE`.
-
-## Additional Project Docs
-
-- `README.zh-CN.md`
-- `docs/README.md`
-- `docs/architecture-diagrams.md`
-- `docs/quickstart.md`
-- `docs/usage.md`
-- `docs/ecosystem.md`
-- `docs/reference-projects.md`
-- `docs/deployment.md`
-- `docs/deployment.zh-CN.md`
-- `docs/chinese-guide.md`
-- `CONTRIBUTING.md`
-- `CHANGELOG.md`
-- `SECURITY.md`
-
-## Starter Kit Additions
-
-This repository also includes:
-
-- `examples/wiki_ext/` — a public outer enhancement-layer example
-- `examples/sample-content/` — a minimal workflow example from raw to reviewed canonical note
-- `docs/reference-projects/` — room for longer-form notes on adjacent projects and patterns
-- `scripts/bootstrap-sample-vault.ps1`
-- `scripts/bootstrap-sample-vault.sh`

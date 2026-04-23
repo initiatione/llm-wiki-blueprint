@@ -1,62 +1,37 @@
 # llm-wiki-blueprint
 
-一个面向 Obsidian 的开源 **LLM Wiki 蓝图项目**。
+[English](./README.md) | [简体中文](./README.zh-CN.md)
 
-这个项目提供的是：
+面向 Obsidian 的 **带审稿闸门的 LLM Wiki 开源 starter kit**。
 
-- 一套推荐的 Vault 目录结构
-- 一套草稿与审稿流程
-- 一套治理文档与模板
-- 一套适合和智能体协作的知识库工作流
+它适合构建这样的私有或团队知识库：
 
-它的核心目标是：
+- 新资料先进入原始入口
+- AI 先生成 draft，而不是直接写入正式知识区
+- 通过 review 后再发布
+- 低信号内容可以先隔离
+- 整个系统继续兼容智能体驱动的执行方式
 
-**让 AI 负责整理和起草，让用户保留最终发布判断。**
+## 为什么要做这个项目
 
-## 这个项目是什么
+很多 LLM 知识库工作流最后会失败，通常是因为：
 
-这是一个 **蓝图 / 模板 / 框架仓库**，不是单一插件，也不是单一执行引擎。
+- 太手工，难以长期坚持
+- 太自动，结果不值得信任
 
-它包含：
+这个项目选择中间路线：
 
-- Obsidian Vault 的推荐结构
-- `_raw -> _drafts -> review -> canonical` 的流程设计
-- 分类、归档、隔离、低风险通过等治理规则
-- 双语文档
-- 模板和示例配置
+**AI 负责整理与编译，人负责最终发布判断。**
 
-## 开始阅读
+## 你能得到什么
 
-- [Home.md](./Home.md)
-- [文档总索引](./docs/README.md)
-- [快速开始](./docs/quickstart.md)
-- [中文导览](./docs/chinese-guide.md)
-
-## 生态位置
-
-这个项目默认存在一个三层生态：
-
-1. **基座工作流仓库**
-   单独存在，负责 skills、workflow、agent 接入。
-
-2. **私有 live Vault**
-   存放你真实知识、草稿、review 状态、正式知识。
-
-3. **增强层**
-   用于放 review-flow 包装、实验功能、可视化管理面板等不想污染基座仓库的内容。
-
-本仓库主要负责的是：
-
-**Vault 蓝图层。**
-
-## 这个项目不是什么
-
-它不是：
-
-- 某个特定 AI 工具的强绑定产品
-- 自动替你发布所有知识的无人值守系统
-- 第二个数据库
-- 第二个聊天插件
+- 一套推荐的 Obsidian Vault 结构
+- 原始资料、draft、正式知识、review、隔离区的模板
+- 路由、审稿、生命周期、隔离区的治理文档
+- 一套示例 Obsidian 配置
+- 中英文文档
+- 增强层样板
+- 一套从 raw 到 reviewed canonical 的最小示例内容
 
 ## 核心工作流
 
@@ -64,112 +39,119 @@
 _raw -> _drafts -> _meta/review -> 正式知识区
 ```
 
-也就是：
+正式知识区建议目录：
 
-1. 新资料先进 `_raw`
-2. AI 整理成 `_drafts`
-3. 在 `_meta/review` 里记录审稿状态
-4. 通过后再进入正式知识区
+- `concepts/`
+- `entities/`
+- `skills/`
+- `references/`
+- `synthesis/`
+- `projects/`
 
-## 正式知识区推荐目录
+## 快速开始
 
-- `concepts/`：稳定概念
-- `entities/`：人、工具、库、组织、数据集
-- `skills/`：可复用方法和工作流
-- `references/`：来源整理稿、单源总结
-- `synthesis/`：跨来源、跨域综合
-- `projects/`：项目知识
+### 方式 A：手动部署
 
-## 系统目录
+1. 创建一个新的私有 Vault 目录
+2. 把本仓库的蓝图结构复制进去
+3. 用 Obsidian 打开该 Vault
+4. 让你偏好的执行型智能体指向这个 Vault
+5. 从 `_raw/` 开始使用
 
-- `_raw/`：原始资料入口
-- `_drafts/`：候选稿
-- `_review/`：可选的审稿辅助笔记
-- `_quarantine/`：隔离区
-- `_archives/`：归档区
-- `_meta/`：治理、taxonomy、架构、看板、review state
+### 方式 B：智能体引导部署
 
-## 为什么值得用
+也可以用 Claude Code、Codex 或其他具备文件能力的智能体，直接把这套蓝图部署到新的 Vault。
 
-很多知识库系统的问题是：
+入口文档：
 
-- 要么太手工，不可持续
-- 要么太自动，质量不稳
+- [快速开始](./docs/quickstart.md)
+- [部署方式](./docs/deployment.zh-CN.md)
 
-这个蓝图走的是中间路线：
+## 开始阅读
 
-**AI 做整理与编译，人做发布与纠偏。**
+- [Home](./Home.md)
+- [文档总索引](./docs/README.md)
+- [快速开始](./docs/quickstart.md)
+- [使用说明](./docs/usage.md)
+- [架构图](./docs/architecture-diagrams.md)
+- [中文导览](./docs/chinese-guide.md)
 
-## 适合谁
+## 生态位置
 
-适合这些场景：
+这套 starter kit 假定你有一个三层生态：
 
-- 个人知识库
-- 项目经验沉淀
-- 多来源材料整理
-- AI 协作工作流记录
-- 需要长期维护的私有知识系统
+1. **基座工作流仓库**
+   单独存在，负责 skills、workflow、agent 接入
 
-## 推荐配合
+2. **私有 live Vault**
+   存放 raw、draft、review state 和正式知识
 
-建议配合：
+3. **增强层**
+   用于放 wrappers、review-flow、管理插件或其他外围增强能力
 
-- Obsidian
+本仓库负责的是：
+
+**Vault 蓝图层。**
+
+相关说明：
+
+- [生态说明](./docs/ecosystem.md)
+- [参考项目](./docs/reference-projects.md)
+
+## 推荐插件栈
+
+这套 starter kit 推荐搭配：
+
 - Dataview
 - Templater
 - Linter
 - Git
 - BRAT
-- 你喜欢的执行型智能体
 
-这些插件的典型作用：
+后续还可以叠加执行型智能体插件或管理面板插件。
 
-- **Dataview**：做看板和队列可视化
-- **Templater**：统一模板
-- **Linter**：保证 frontmatter 和 markdown 规范
-- **Git**：做版本保护
-- **BRAT**：便于测试/分发与工作流配套的社区插件
+## 文档入口
 
-## 如何使用
+核心文档：
 
-1. 复制本仓库作为新 Vault 的骨架
-2. 用你自己的执行代理对接这个 Vault
-3. 把新资料放进 `_raw`
-4. 让 AI 整理成 `_drafts`
-5. 审阅后再发布到正式区
+- [文档总索引](./docs/README.md)
+- [快速开始](./docs/quickstart.md)
+- [使用说明](./docs/usage.md)
+- [部署方式](./docs/deployment.zh-CN.md)
+- [架构图](./docs/architecture-diagrams.md)
+- [中文导览](./docs/chinese-guide.md)
 
-## 开源建议
+项目规范：
 
-如果你基于本项目做自己的知识库：
+- [贡献说明](./CONTRIBUTING.md)
+- [更新日志](./CHANGELOG.md)
+- [安全说明](./SECURITY.md)
+- [许可证](./LICENSE)
 
-- 把真实私有内容留在私有仓库
-- 把开源仓库当成框架层
-- 不要把会话记录、密钥、日志、原始来源一股脑放进公开仓库
+## 示例与 starter 资产
 
-## 许可证
+- [examples/wiki_ext](./examples/wiki_ext)
+- [examples/sample-content](./examples/sample-content)
+- [scripts/bootstrap-sample-vault.ps1](./scripts/bootstrap-sample-vault.ps1)
+- [scripts/bootstrap-sample-vault.sh](./scripts/bootstrap-sample-vault.sh)
 
-MIT
+## 这个项目不是什么
 
-## 其他项目文档
+它不是：
 
-- `docs/README.md`
-- `docs/quickstart.md`
-- `docs/usage.md`
-- `docs/ecosystem.md`
-- `docs/reference-projects.md`
-- `docs/deployment.md`
-- `docs/deployment.zh-CN.md`
-- `docs/chinese-guide.md`
-- `CONTRIBUTING.md`
-- `CHANGELOG.md`
-- `SECURITY.md`
+- 某个执行型智能体的替代品
+- 某个厂商专属方案
+- 图数据库
+- 自动无人值守发布系统
+- 公共 live 知识库
 
-## Starter Kit 扩展
+## 使用原则
 
-本仓库现在还包含：
+把这个仓库当成：
 
-- `examples/wiki_ext/`：公开的增强层样板
-- `examples/sample-content/`：从 raw 到 draft 到 review 再到正式知识的最小样板
-- `docs/reference-projects/`：参考项目与设计来源的扩展说明目录
-- `scripts/bootstrap-sample-vault.ps1`
-- `scripts/bootstrap-sample-vault.sh`
+- 框架层
+- starter kit
+- 模板层
+
+而不是把它直接当成你的私有 live 知识库。
+
