@@ -4,6 +4,7 @@ All general explanatory documentation is collected here.
 
 ## English
 
+- [architecture diagrams](./architecture-diagrams.md)
 - [quickstart](./quickstart.md)
 - [usage](./usage.md)
 - [ecosystem](./ecosystem.md)
@@ -25,4 +26,3 @@ These remain in the repository root because they are standard GitHub project ent
 - `CHANGELOG.md`
 - `SECURITY.md`
 - `LICENSE`
-

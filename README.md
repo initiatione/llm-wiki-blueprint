@@ -174,6 +174,7 @@ See `LICENSE`.
 
 - `README.zh-CN.md`
 - `docs/README.md`
+- `docs/architecture-diagrams.md`
 - `docs/quickstart.md`
 - `docs/usage.md`
 - `docs/ecosystem.md`
