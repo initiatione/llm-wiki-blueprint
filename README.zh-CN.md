@@ -25,6 +25,13 @@
 - 双语文档
 - 模板和示例配置
 
+## 开始阅读
+
+- [Home.md](./Home.md)
+- [文档总索引](./docs/README.md)
+- [快速开始](./docs/quickstart.md)
+- [中文导览](./docs/chinese-guide.md)
+
 ## 生态位置
 
 这个项目默认存在一个三层生态：
