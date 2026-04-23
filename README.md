@@ -174,8 +174,19 @@ See `LICENSE`.
 ## Additional Project Docs
 
 - `README.zh-CN.md`
+- `QUICKSTART.md`
+- `USAGE.md`
+- `ECOSYSTEM.md`
+- `REFERENCE_PROJECTS.md`
 - `DEPLOYMENT.md`
 - `DEPLOYMENT.zh-CN.md`
 - `CONTRIBUTING.md`
 - `CHANGELOG.md`
 - `SECURITY.md`
+
+## Starter Kit Additions
+
+This repository also includes:
+
+- `examples/wiki_ext/` — a public outer enhancement-layer example
+- `docs/reference-projects/` — room for longer-form notes on adjacent projects and patterns

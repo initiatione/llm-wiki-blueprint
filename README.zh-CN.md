@@ -145,8 +145,19 @@ MIT
 
 ## 其他项目文档
 
+- `QUICKSTART.md`
+- `USAGE.md`
+- `ECOSYSTEM.md`
+- `REFERENCE_PROJECTS.md`
 - `DEPLOYMENT.md`
 - `DEPLOYMENT.zh-CN.md`
 - `CONTRIBUTING.md`
 - `CHANGELOG.md`
 - `SECURITY.md`
+
+## Starter Kit 扩展
+
+本仓库现在还包含：
+
+- `examples/wiki_ext/`：公开的增强层样板
+- `docs/reference-projects/`：参考项目与设计来源的扩展说明目录
